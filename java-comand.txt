@@ -1,0 +1,315 @@
+----------------------------------------------------------------------------<Java-comand.java>--------------------------------------------------------------------------------
+
+propiedades java:////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+java es key sensitiv
+java esta orientado a objetos
+
+tipos de datos primitivos en java:
+
+Enteros:
+int	estamos reservando 4 bits en la memoria. Desde -2,147,483,648 hasta 2,147,483,647
+short	estamos reservando 2 bits en la memoria. Desde -32,768 hasta 32,767   // unque deje guardar otro balor no superar los limites ya que jaba lo limitara en el compilado
+long	estamos reservando 8 bits en la memoria. Una barbaridad. Sufijo L
+byte	estamos reservando 1 bit  en la memoria. Desde -128 hasta 127.
+
+Coma flotante (decimales):
+float:	4 bytes Aproximada mente 6 a 7 cifras decimales. Sufijo F.
+doublé: 8 bytes Aproximada mente 15 cifras decimales significativas
+
+Char: // caracteres
+Boolean: // si o no
+
+Una variable es un espacio de memoria donde se almacenara un valor que podrá cambiar
+una variable se declara jem salario = 2000
+las variables se almacenan en la RAM
+
+			       |Api-java|
+				
+	  	    |>----------paquetes----------<|
+       		   java				 javax
+	java.awt-java.util-java.io   javax.activity-javax.annotation
+		     |	      
+	      java.util.regex
+
+términos java://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+IGU //Interfaz Grafica de Usuario
+
+Aplicaciones de consola 	  // solo en consola ventana de sell
+Aplicaciones de propósito general // aplicaciones graficas aplicaciones de red
+applets 			  // implementación de java en máquina virtual en una web es como un api
+
+Refundición:
+int raíz = (int)Math.ound(num1);  // modificar o caviar de un tipo de numero a otro
+
+Matrices(Arrays, Arreglos) // Estructura de datos que contiene una colección de datos del mismo tipo
+
+constantes // las constantes solo almacenan un valor que luego no se puede cambiar
+
+los objetos tiene propiedades y tiene métodos (los métodos son que es capaz de hacer un método)
+
+clases //
+string	//Estring no es un primitibo
+math	//Funciones matematicas
+array
+thread
+existen dos tipos de clases propias y definidas las clases propias las creamos nosotros para ese código y las predefinidas ya se nos suministran con el lenguaje de programación
+
+API Java es una biblioteca en la que se incluyen todas las clases de java
+
+los archivos java se tiene que guardar como .java
+
+comentarios en java:////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// comentarios cortos
+/* esto es un comentario
+	largo para barias líneas y enteres
+*/
+
+'d' para un solo valor o carácter	"hola" para barios valores y formar estring   todas sentencias en java se termina con ;
+
+las llaves son lo que marcan la delimitación de los códigos {} además tiene que cerrarse en el mimo orden que fueron abiertas
+
+Variables://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Variable: espacio reservado y identificado en las celdas de la memoria para guardar valores:  [hola]  (no se puede asignar el mismo nombre a 2 variables)
+array o vector: conjunto de espacios en celda reservados seguidos para guardar variables:  [1][2][3][4]
+array bidimensional: conjunto de espacios reservado en filas y columnas:  [][][]
+								          [][][]
+
+int edad = 25;                    // Entero Largo numero entero -infinito asta +infinito
+int operador1,operador2,operador3 // Podemos declarar barias variables como entero a la vez
+double salario = 3000.50;         // Decimal valor con . o ,
+boolean esEstudiante = true;      // Booleano (verdadero o falso)  o 1 y 0 argumentos de dos datos
+char inicial = 'A';               // Carácter 
+String nombre = "Juan";           // Cadena de texto
+int[] vector = new int[100];      //definimos array para enteros con un tamaño de 100 y lo guardamos en la variable vector
+int[][] vector = new int[100][100];// definimos array bidimensional como entero y lo guardamos en la variable vector
+vector[filas][columnas]           // con new se definen nuevos objetos como el array bidimensional
+break;			          // cierra o corta los bucles tal cual 
+
+Operadores y operaciones://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+suma = 5 + 3;           // Suma
+resta = 5 - 3;          // Resta
+multiplicación = 5 * 3; // Multiplicación
+división = 5.0 / 3.0;   // División
+modulo = 5 % 3;         // Resto de la división
+(condición) ? valor_si_verdadero : valor_si_falso;    // ejemplo de cuenta con condición de 0 y 1     ((i % 2 == 0) ? 3 : 1)   los puntos separan la opción verdadera de la falsa lo que en phyton es ;
+
+Sacar la raiz:
+double raiz = Math.sqrt(9);  // gracias al clase Math guardamos raiz cuadrada de 9
+
+Redondear numero:
+double num1 = 5.85; // balor a redondear
+int resultado = (int)Math.round(num1); // refundimos el numero a entero y lo redondeamos gracias a la clase Math
+
+Calcular potencia de un numero:
+double base = 5;		//base o numero a esponenciar
+double exponente = 3;		//potencia
+double resultado = Math.pow(base, exponente);	//calcular potencia gracias a la clase Math
+
+Relaciones:///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+resultado = 5 > 3;    // true (mayor que)
+resultado = 5 < 3;    // false (menor que)
+<>		      // mayor o menor que
+resultado = 5 == 3;   // false (igual a)
+resultado = 5 != 3;   // true (diferente de)
+
+Lógicos://///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+resultadoLogico = true && false;  // false (AND lógico)   si los dos son verdaderos la salida es true si no false
+resultadoLogico = true || false;  // true (OR lógico)	  
+resultadoLogico = != false;       // false (NOT lógico)
+resultadoLogico = 1;              //guardar dato o enviar a otra bariable
+comparar == comparar;             // comparar datos de las variables
+
+operador de incremento y decremento://///////////////////////////////////////////////////////////////////////////////////////////////////////
+int i = 1;
+
+i++;  //incremento            entonces i guardara 2
+i--;  //decremento 	      entonces i guardara 0
+i+=3  //incremento pero de 3  entonces i guardara 4
+i-=3  //decremento pero de 3  entonces i guardara -2
+
+Concatenador:///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+System.out.println("En " + c + "el" + resultado); // para unir barias palabras y en este caso imprimirlo junto
+
+Estructuras de Control de Flujo Condicionales///////////////////////////////////////////////////////////////////////////////////////////////
+
+if (3 >= 18) {                                // si 3 mayor o = de 18 entrar en el print
+    System.out.println("Es mayor de edad");
+} else if(3 >= 18){                           // si no ha entrado en el primero pero el argumento si 3 mayor o = de 18 entrar es balido entrara en el
+    System.out.println("Es menor de edad");
+}else{                                        // si no a entrado en el if entrara en el else
+    System.out.println("Es menor de edad");
+}					      // fin instrucción
+
+
+int dia = 3;
+switch (dia) { //switch (para múltiples opciones):
+    case 1:
+        System.out.println("Lunes");
+        break;
+    case 2:
+        System.out.println("Martes");
+        break;
+    default:
+        System.out.println("Otro día");
+        break;
+}
+
+Bucles:////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+for (int i = 0; i < 5; i++) {// este bucle funciona asta que algo se llena o sucede   con matrices para recorrer asta el ultimo se puede: mi_matriz.length
+    System.out.println("Contador: " + i);
+}
+
+for (String elemento : paises) {// nuevo bucle for its
+}
+
+
+while (i < 5) {//while (mientras una condición sea verdadera):/// bucle repetitivo normal mente infinito
+    System.out.println("Contador: " + i);
+    i++;
+}
+do-while (ejecuta al menos una vez):// una vez que pasa algo
+
+do {
+    System.out.println("Contador: " + i);
+    i++;
+} while (i < 5);
+
+//usar dowhil para aseguarse de que no se sobre escriban caracteres
+private static void rellenarTableroH() {
+    int filaAl = 0;
+    int columnaAl = 0;
+    for (int i = 0; i <10 ; i++) {
+        do {
+            filaAl = aleatorio.nextInt(10);
+            columnaAl = aleatorio.nextInt(10);
+        } while (tablero[filaAl][columnaAl]!= 'L');
+        tablero[filaAl][columnaAl] = 'H';
+    }
+}
+
+4. Funciones (Métodos):///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Una función en Java se define dentro de una clase y tiene una estructura como esta:
+
+public int sumar(int a, int b) {   // Método que recibe dos enteros y devuelve un entero
+    return a + b;                  // Devuelve la suma de a y b
+}
+public: Indica que el método es accesible desde otras clases.
+int: Tipo de dato que devuelve la función.
+sumar(int a, int b): Nombre del método y los parámetros que recibe.
+return: Devuelve el valor.
+
+5. Clases y Objetos://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Una clase es una plantilla para crear objetos. Aquí un ejemplo básico de una clase:
+La clase es la manera de definir un objeto y un objeto puede ser una función o eso creo las clases se pueden ejecutar como: persona();
+
+public class Persona {
+    // Atributos
+    String nombre;
+    int edad;
+
+    // Constructor
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Método
+    public void saludar() {
+        System.out.println("Hola, mi nombre es " + nombre);
+    }
+}
+Para crear un objeto de la clase Persona:
+
+como crear una clase que además de poderlo ejecutar decirle con que dato trabajar:
+
+static int generarAleatorios(int semilla){
+    Random aleatorio = new Random();
+    int numAle = aleatorio.nextInt(semilla);
+    return numAle;
+}
+
+ejemplo de uso: variable = generarAleatorios(10);
+
+
+switch //switch evalúa el valor de una variable y selecciona entre varios "casos" (case). Cada case representa una posible coincidencia con el valor de la variable. Si hay coincidencia, se ejecuta el bloque de código asociado a ese case. Opcionalmente, puedes definir un default, que se ejecuta si ningún case coincide.
+
+public static void main(String[] args) { // lo metemos dentro del main principal
+    String fruta = "manzana"; // definimos variable a comparar
+
+    switch (fruta) {
+        case "manzana":
+            System.out.println("Es una manzana.");// Bloque de código si variable == valor
+            break;				  // Termina la ejecución del switch
+        case "naranja":
+            System.out.println("Es una naranja.");
+            break;
+        case "pera":
+            System.out.println("Es una pera.");
+            break;
+        default:
+            System.out.println("Fruta desconocida.");// Bloque de código si la variable no coincide con ningún case
+            break;
+    }
+}
+
+
+Modificadores de Acceso://////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public      //Accesible desde cualquier clase.
+private     //Solo accesible desde dentro de la misma clase.
+protected   //Accesible desde la misma clase, clases del mismo paquete, y subclases.
+
+static                            // Variable estática, compartida por todas las instancias
+void                              // indica que no devuelve ningun balor o en otras palabras que no se ba a bolber ausar par abalores
+final                             // que la variable o función que la lleve no puede volver a ser editada para modificar su valor por que se convierte en constante
+protected int datoProtegido = 10; // proted hace que el dato este protejido de manera que ninguna otra funcion pueda haceder ha el
+abstract                          // se usa para declarar clases y métodos que son incompletos y necesitan ser implementados en subclases.
+
+6.funciones de java: //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+System.out.print("hola");     //Nos permite imprimir lo que tenemos entre los () que es un caso en este caso
+System.out.print(variable);   //también podemos imprimir variables directamente
+//////////////////////////////////////////////////////tipos de print
+System.out.print();    //Imprime el testo tal cual todo junto en la misma limnea
+System.out.printf();   //Imprime con formato ejemplo System.out.printf("formato", valores); inpormira la variable valores con el nombre valores y no el valor que contenga
+System.out.println();  //cada println se asegurar que se haga en una limnea separando cada testo de los distintos println (ln = limnea)
+System.err.println();  //Imprime mensajes de error y e vita que se corte el código si se maneja el error
+
+"nombre".length() // para sacar las letras de un texto ejm   String nombre = "Juan";	System.out.println(nombre.length());// se podría indicar la posición de lo que quieres leer y asi imprimir ese testo System.out.println("La primera letra de mi nombre es "+ nombre.charAt(0));
+para sacar la ultima letra: int ultimaLetra = nombre.length();   System.out.println("La ultima letra de mi nombre es "+ nombre.charAt(ultimaLetra-1));
+String frase="Hoy es un estupendo dia mi cumple"; // frase a estraer estring
+String frase_resumen = frase.substring(1, 10); // comando para estraer palabras el 1 es que compienze por la primera letra asta la 10
+
+// inbestigar alumno1 = "David";   alumno2 = "Juan";   System.out.println(alumno1.equalsIgnoreCase(alumno2));
+
+Scanner leer = new Scanner(System.in);  // Creamos el objeto Scanner que lo que decimos básica mente es que leer equivalga a escanear lo que el System.in diga que seria digamos lo que hay en la terminal
+int edad = leer.nextInt();  		// Lee un número entero por la variable edad que  esta declarada para que lea enteros pero podría leer cualquier otro dato con su correspondiente declaración. El nextInt() se puede 
+
+char usuario = leer.next().charAt(0);
+canviar por nextLine() nextDouble()
+
+Random random = new Random();                    // Crear un objeto de la clase Random que decimos basiaca mente que random equibale a un aleatorio
+int numeroAleatorioEntero = random.nextInt(100); // guardamos en numeroAleatorioEntero un numero aleatorio entero tal como esta definido del 0 al 100 pero podria ir hasta n-1
+// al random le podemos sumar a parte lo que sea para hacer el minimo   //cuidado con el random que hay beces que si no se le asigna a otra bariable simpre coje el mismo valor
+
+Math.random()//función de Math capaz de generar números aleatorios
+
+try { // el try maneja que el código cuando se pare no se de tenga por un error
+    Thread.sleep(2000);  //comando que para el código los milisegundos que ponga en este caso retrasa de 2 segundos (2000 milisegundos)
+} catch (InterruptedException e) {
+    e.printStackTrace();
+}
+
+7.bibliotecas de java: //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.Scanner;   //cojemos la librera de la clase escáner para poder escanear lo que se escribe por pantalla es importante y imprescindible
+import java.util.Random;    // random tiene las librerias capaces de aleatorizar numeros de manera que se creen numeros aleatorios a encargo
+import java.util.*;	    // importa todas las utilidades que haya de java ose atodas las clases de ese paquete

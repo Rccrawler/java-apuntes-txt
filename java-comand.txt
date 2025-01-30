@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------<Java-comand.java>--------------------------------------------------------------------------------
 
 propiedades java:////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-java es key sensitiv
+java es key sensitiv   //ademas detecta minusculas y mallusculas
 java esta orientado a objetos
 
 tipos de datos primitivos en java:
@@ -14,7 +14,7 @@ byte	estamos reservando 1 bit  en la memoria. Desde -128 hasta 127.
 
 Coma flotante (decimales):
 float:	4 bytes Aproximada mente 6 a 7 cifras decimales. Sufijo F.
-doublé: 8 bytes Aproximada mente 15 cifras decimales significativas
+double: 8 bytes Aproximada mente 15 cifras decimales significativas
 
 Char: // caracteres
 Boolean: // si o no
@@ -34,6 +34,7 @@ las variables se almacenan en la RAM
 términos java://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 IGU //Interfaz Grafica de Usuario
+pojo //Plain Old Java Object
 
 Aplicaciones de consola 	  // solo en consola ventana de sell
 Aplicaciones de propósito general // aplicaciones graficas aplicaciones de red
@@ -49,8 +50,8 @@ constantes // las constantes solo almacenan un valor que luego no se puede cambi
 los objetos tiene propiedades y tiene métodos (los métodos son que es capaz de hacer un método)
 
 clases //
-string	//Estring no es un primitibo
-math	//Funciones matematicas
+string	//Estring no es un primitivo
+math	//Funciones matemáticas
 array
 thread
 existen dos tipos de clases propias y definidas las clases propias las creamos nosotros para ese código y las predefinidas ya se nos suministran con el lenguaje de programación
@@ -77,16 +78,29 @@ array o vector: conjunto de espacios en celda reservados seguidos para guardar v
 array bidimensional: conjunto de espacios reservado en filas y columnas:  [][][]
 								          [][][]
 
-int edad = 25;                    // Entero Largo numero entero -infinito asta +infinito
+int edad = 25;                    // Entero Largo numero entero -infinito asta +infinito por defecto el balor sera 0
 int operador1,operador2,operador3 // Podemos declarar barias variables como entero a la vez
+Integer salario = 1000            // Numero entero por defecto el balor sera Null
 double salario = 3000.50;         // Decimal valor con . o ,
 boolean esEstudiante = true;      // Booleano (verdadero o falso)  o 1 y 0 argumentos de dos datos
 char inicial = 'A';               // Carácter 
 String nombre = "Juan";           // Cadena de texto
+Object variable = "Juan"; o Object variable = 2; // variable que puede contener cualquier tipo de dato derrocha muchos recursos disponible apartir v10 java haun no soportado por muchas condiciones
+var variable = "Hola";            // variable que puede almacenar culaquier cosa pero se queda con el formato del primero que almacene siendo bastant optima v10 java
 int[] vector = new int[100];      //definimos array para enteros con un tamaño de 100 y lo guardamos en la variable vector
 int[][] vector = new int[100][100];// definimos array bidimensional como entero y lo guardamos en la variable vector
 vector[filas][columnas]           // con new se definen nuevos objetos como el array bidimensional
+ArrayList<String> listaCanciones = new ArrayList<>(); // array list dinamico se define lo que ba ha guardar <String> en donde listaCanciones y se crea pero necesita para funcionar clases de java pacquet import java.util.ArrayList;
+/*   Para trabajar con el array dinamico: hañadir al array */ listaCanciones.add(cancion) /* Para estraer datos del array */ listaCanciones.get(i) /*Para elminar datos del array*/ listaCanciones.remove(i)
 break;			          // cierra o corta los bucles tal cual 
+System.exit(0);           // Para el codigo en ejecucion
+
+Convertir Variables: ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+codigo = leer.nextInt().trim(); //el .trim() quita los espacios en blanco
+int numero = Integer.parseInt(codigo); // Convierte el String "123" a un entero 123
+
+
 
 Operadores y operaciones://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -96,16 +110,17 @@ multiplicación = 5 * 3; // Multiplicación
 división = 5.0 / 3.0;   // División
 modulo = 5 % 3;         // Resto de la división
 (condición) ? valor_si_verdadero : valor_si_falso;    // ejemplo de cuenta con condición de 0 y 1     ((i % 2 == 0) ? 3 : 1)   los puntos separan la opción verdadera de la falsa lo que en phyton es ;
+clave.equals(pass)==false // equals compara dos textos y si son iguales pes en este caso pondrá false por ejempló en un while     while (clave.equals(pass)==false){
 
 Sacar la raiz:
-double raiz = Math.sqrt(9);  // gracias al clase Math guardamos raiz cuadrada de 9
+double raiz = Math.sqrt(9);  // gracias al clase Math guardamos raíz cuadrada de 9
 
 Redondear numero:
 double num1 = 5.85; // balor a redondear
 int resultado = (int)Math.round(num1); // refundimos el numero a entero y lo redondeamos gracias a la clase Math
 
 Calcular potencia de un numero:
-double base = 5;		//base o numero a esponenciar
+double base = 5;		//base o numero a exponencial
 double exponente = 3;		//potencia
 double resultado = Math.pow(base, exponente);	//calcular potencia gracias a la clase Math
 
@@ -122,16 +137,22 @@ Lógicos:///////////////////////////////////////////////////////////////////////
 resultadoLogico = true && false;  // false (AND lógico)   si los dos son verdaderos la salida es true si no false
 resultadoLogico = true || false;  // true (OR lógico)	  
 resultadoLogico = != false;       // false (NOT lógico)
-resultadoLogico = 1;              //guardar dato o enviar a otra bariable
+resultadoLogico = 1;              //guardar dato o enviar a otra variable
 comparar == comparar;             // comparar datos de las variables
 
 operador de incremento y decremento://///////////////////////////////////////////////////////////////////////////////////////////////////////
 int i = 1;
 
+i++ //post-incremento una bez pasada la cuenta ejemplo a = b++ + ++c a=1 porque d se sumara pasada la cuenta por lo que de es 0
+
+++i //pre-incremento se incrementa no mas aparecer la instrucción
+
 i++;  //incremento            entonces i guardara 2
 i--;  //decremento 	      entonces i guardara 0
 i+=3  //incremento pero de 3  entonces i guardara 4
 i-=3  //decremento pero de 3  entonces i guardara -2
+
+
 
 Concatenador:///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -146,6 +167,12 @@ if (3 >= 18) {                                // si 3 mayor o = de 18 entrar en 
 }else{                                        // si no a entrado en el if entrara en el else
     System.out.println("Es menor de edad");
 }					      // fin instrucción
+
+
+//preferir .equals() antes que == al comparar testo que lo dice el profe
+if (bariable_detexto.equals("saludo")) {        // if para comparar dos cadenas de texto una en una variable y otra en el if directamente
+    System.out.println(bariable_detexto.equals);//si el contenido de la variable es saludos imprimirá su contenido
+}
 
 
 int dia = 3;
@@ -195,6 +222,16 @@ private static void rellenarTableroH() {
     }
 }
 
+//recorrer array unidemensional
+	for (int i = 0; i < array.length; i++) {
+//recorrer array bidimensional con las dos medidas de longitud y anchura
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+//recorrer array bidimensional con dos medidas distintas
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {  // Esto obtiene el número de columnas de la primera fila
+
+
 4. Funciones (Métodos):///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Una función en Java se define dentro de una clase y tiene una estructura como esta:
 
@@ -217,7 +254,7 @@ public class Persona {
 
     // Constructor
     public Persona(String nombre, int edad) {
-        this.nombre = nombre;
+        this.nombre = nombre;			//this.nombre = nombre    this. sirbe para guardarla en una bariable esterior de la funcion o clase y referirnos a la variable esterior de la clase y no a la interna
         this.edad = edad;
     }
 
@@ -277,9 +314,10 @@ abstract                          // se usa para declarar clases y métodos que 
 
 System.out.print("hola");     //Nos permite imprimir lo que tenemos entre los () que es un caso en este caso
 System.out.print(variable);   //también podemos imprimir variables directamente
+System.out.println("Opción: \n1: Verdadero"); //con \n1 hacemos un salto de linea para que el testo "Verdadero" se imprima debajo
 //////////////////////////////////////////////////////tipos de print
 System.out.print();    //Imprime el testo tal cual todo junto en la misma limnea
-System.out.printf();   //Imprime con formato ejemplo System.out.printf("formato", valores); inpormira la variable valores con el nombre valores y no el valor que contenga
+System.out.printf("%1.2f", x);   //Imprime con formato ejemplo System.out.printf("formato", valores); inpormira la variable valores con el nombre valores y no el valor que contenga
 System.out.println();  //cada println se asegurar que se haga en una limnea separando cada testo de los distintos println (ln = limnea)
 System.err.println();  //Imprime mensajes de error y e vita que se corte el código si se maneja el error
 
@@ -292,9 +330,15 @@ String frase_resumen = frase.substring(1, 10); // comando para estraer palabras 
 
 Scanner leer = new Scanner(System.in);  // Creamos el objeto Scanner que lo que decimos básica mente es que leer equivalga a escanear lo que el System.in diga que seria digamos lo que hay en la terminal
 int edad = leer.nextInt();  		// Lee un número entero por la variable edad que  esta declarada para que lea enteros pero podría leer cualquier otro dato con su correspondiente declaración. El nextInt() se puede 
+leer.close();                       // cierra la funcion leer para que el codigo ballamas rapido
 
-char usuario = leer.next().charAt(0);
-canviar por nextLine() nextDouble()
+char usuario = leer.next().charAt(0); // Lee una palabra de la entrada y toma el primer carácter.
+canviar por:
+String usuario = leer.nextLine(); // Lee una línea completa de texto desde la entrada.
+double usuario = leer.nextDouble(); // Lee un número decimal (double) desde la entrada.
+String jugada = leer.next(); //Lee cualquier texto
+
+String Nombre = JOptionPane.showInputDialog("Introduce tu nombre"); //gracias a la libereia swing con JOptionPane.showInputDialog leemos en un cuadro lo qu el usuario introduzca
 
 Random random = new Random();                    // Crear un objeto de la clase Random que decimos basiaca mente que random equibale a un aleatorio
 int numeroAleatorioEntero = random.nextInt(100); // guardamos en numeroAleatorioEntero un numero aleatorio entero tal como esta definido del 0 al 100 pero podria ir hasta n-1
@@ -308,8 +352,82 @@ try { // el try maneja que el código cuando se pare no se de tenga por un error
     e.printStackTrace();
 }
 
+System.exit(0);    //cuando aprece en el conpilador esta linea de codigo cierra el codigo
+
 7.bibliotecas de java: //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import java.util.Scanner;   //cojemos la librera de la clase escáner para poder escanear lo que se escribe por pantalla es importante y imprescindible
 import java.util.Random;    // random tiene las librerias capaces de aleatorizar numeros de manera que se creen numeros aleatorios a encargo
 import java.util.*;	    // importa todas las utilidades que haya de java ose atodas las clases de ese paquete
+import javax.swing.*;	// importa todas las utilidades de swing
+
+
+
+
+8.Metodos y procedimientos //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Ejemplo de código para ordenar un array bidimensional de mayor a menor:
+
+public class OrdenarArrayBidimensional {
+    public static void main(String[] args) {
+        // Array bidimensional de ejemplo
+        int[][] array = {
+            {5, 2, 8},
+            {1, 4, 7},
+            {9, 3, 6}
+        };
+
+        // Mostrar array original
+        System.out.println("Array original:");
+        imprimirArray(array);
+
+        // Ordenar el array bidimensional de mayor a menor
+        ordenarDeMayorAMenor(array);
+
+        // Mostrar el array ordenado
+        System.out.println("\nArray ordenado de mayor a menor:");
+        imprimirArray(array);
+    }
+
+    // Método para ordenar un array bidimensional de mayor a menor
+    public static void ordenarDeMayorAMenor(int[][] array) {
+        // Paso 1: Convertir el array bidimensional en un array unidimensional
+        int[] tempArray = new int[array.length * array[0].length];
+        int index = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                tempArray[index++] = array[i][j];
+            }
+        }
+
+        // Paso 2: Ordenar el array unidimensional de mayor a menor usando Bubble Sort
+        for (int i = 0; i < tempArray.length - 1; i++) {
+            for (int j = 0; j < tempArray.length - i - 1; j++) {
+                if (tempArray[j] < tempArray[j + 1]) {
+                    // Intercambiar si están en el orden incorrecto
+                    int temp = tempArray[j];
+                    tempArray[j] = tempArray[j + 1];
+                    tempArray[j + 1] = temp;
+                }
+            }
+        }
+
+        // Paso 3: Volver a llenar el array bidimensional con los elementos ordenados
+        index = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = tempArray[index++];
+            }
+        }
+    }
+
+    // Método para imprimir el array bidimensional
+    public static void imprimirArray(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}

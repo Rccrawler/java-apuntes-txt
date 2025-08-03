@@ -1,3 +1,5 @@
+////////////////////////////////////////////////////////////////////terminos ha haprender
+
 ----------------------------------------------------------------------------<Java-comand.java>--------------------------------------------------------------------------------
 
 propiedades java:////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,6 +38,8 @@ términos java://///////////////////////////////////////////////////////////////
 IGU //Interfaz Grafica de Usuario
 pojo //Plain Old Java Object
 
+Un digito es cualquier caracter entre 0 y 9
+
 Aplicaciones de consola 	  // solo en consola ventana de sell
 Aplicaciones de propósito general // aplicaciones graficas aplicaciones de red
 applets 			  // implementación de java en máquina virtual en una web es como un api
@@ -44,6 +48,8 @@ Refundición:
 int raíz = (int)Math.ound(num1);  // modificar o caviar de un tipo de numero a otro
 
 Matrices(Arrays, Arreglos) // Estructura de datos que contiene una colección de datos del mismo tipo
+
+media query // consulta ha base de datos normalmente sql
 
 constantes // las constantes solo almacenan un valor que luego no se puede cambiar
 
@@ -56,9 +62,32 @@ array
 thread
 existen dos tipos de clases propias y definidas las clases propias las creamos nosotros para ese código y las predefinidas ya se nos suministran con el lenguaje de programación
 
+Definicion de metodo: el metodo como el main() engloba todas las sentencias a realizar coando enjecuta el metodo
+
+get //consultar estado
+set //modificar su estado
+
+Dentro del main se incluyen sentencias de codigo y hacaban con ;
+
 API Java es una biblioteca en la que se incluyen todas las clases de java
 
 los archivos java se tiene que guardar como .java
+
+Maven te da los modulos y te los centraliza ha parte de gestionar el xml y te trae las librerias y hace la configuracion
+
+media queries consulta ha base de datos ejemplo un sql en java quie le pregunta halgo ha la base de datos
+
+patron Singleton
+
+Características del Patrón Singleton:
+
+1- Instancia Única: Asegura que una clase tenga solo una instancia y proporciona un punto de acceso global a esa instancia.
+2- Control de Acceso: Proporciona un control sobre cuándo y cómo se crea la instancia.
+3- Lazy Initialization: La instancia se crea solo cuando se necesita, lo que puede ahorrar recursos si la instancia no es necesaria durante toda la vida de la aplicación.
+
+alias es otro nombre que se referencia al mismo objeto
+
+parametros lo que ba entre los (parentesis)
 
 comentarios en java:////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -67,9 +96,23 @@ comentarios en java:////////////////////////////////////////////////////////////
 	largo para barias líneas y enteres
 */
 
+Comentario de documentacion Empieza por /** y termina por */ para documentar automaticamente los programas en este tipo de comentario se suele indicar
+autor y version de sofware
+/**
+* Programa HolaMundo
+* @author Fundamentos de Informática
+* @version 1.0
+* @see Referencias
+*/
+
 'd' para un solo valor o carácter	"hola" para barios valores y formar estring   todas sentencias en java se termina con ;
 
 las llaves son lo que marcan la delimitación de los códigos {} además tiene que cerrarse en el mimo orden que fueron abiertas
+
+
+static { //no es un comentario pero lo pongo ha qui por que es inportante
+    System.out.println("La clase FactoryMotorSQL se está usando");   // te permite escribir halgo este donde este en el codigo
+} // no inporta que este dentro de una funcion
 
 Variables://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -82,17 +125,19 @@ int edad = 25;                    // Entero Largo numero entero -infinito asta +
 int operador1,operador2,operador3 // Podemos declarar barias variables como entero a la vez
 Integer salario = 1000            // Numero entero por defecto el balor sera Null
 double salario = 3000.50;         // Decimal valor con . o ,
+float percio = 1.6f;              // numero de coma flotante y hay que hañadir la f para que sea de comoa flotante
 boolean esEstudiante = true;      // Booleano (verdadero o falso)  o 1 y 0 argumentos de dos datos
 char inicial = 'A';               // Carácter 
 String nombre = "Juan";           // Cadena de texto
 Object variable = "Juan"; o Object variable = 2; // variable que puede contener cualquier tipo de dato derrocha muchos recursos disponible apartir v10 java haun no soportado por muchas condiciones
 var variable = "Hola";            // variable que puede almacenar culaquier cosa pero se queda con el formato del primero que almacene siendo bastant optima v10 java
-int[] vector = new int[100];      //definimos array para enteros con un tamaño de 100 y lo guardamos en la variable vector
+int[] vector = new int[100];       //definimos array para enteros con un tamaño de 100 y lo guardamos en la variable vector
 int[][] vector = new int[100][100];// definimos array bidimensional como entero y lo guardamos en la variable vector
-vector[filas][columnas]           // con new se definen nuevos objetos como el array bidimensional
+vector[filas][columnas]            // con new se definen nuevos objetos como el array bidimensional
 ArrayList<String> listaCanciones = new ArrayList<>(); // array list dinamico se define lo que ba ha guardar <String> en donde listaCanciones y se crea pero necesita para funcionar clases de java pacquet import java.util.ArrayList;
-/*   Para trabajar con el array dinamico: hañadir al array */ listaCanciones.add(cancion) /* Para estraer datos del array */ listaCanciones.get(i) /*Para elminar datos del array*/ listaCanciones.remove(i)
-break;			          // cierra o corta los bucles tal cual 
+Map<String, Function<String, SuperHero>> heroMap = new HashMap<>();  // array list de funciones en vez de hacer un new superHero por cadabez que cerenos crear un nuebo herue   SuperHero superr = new SuperHero()
+/*   Para trabajar con el array dinamico: hañadir al array */ listaCanciones.add(cancion) /* Para estraer datos del array */ listaCanciones.get(i) /*Para elminar datos del array*/ listaCanciones.remove(i) /*Para borrar todo lo que contenga el array*/ listaCanciones.clear(i)
+break;			           // cierra o corta los bucles tal cual 
 System.exit(0);           // Para el codigo en ejecucion
 
 Convertir Variables: ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -100,6 +145,45 @@ Convertir Variables: ///////////////////////////////////////////////////////////
 codigo = leer.nextInt().trim(); //el .trim() quita los espacios en blanco
 int numero = Integer.parseInt(codigo); // Convierte el String "123" a un entero 123
 
+
+Hasmap Array ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.HashMap;  // inporta los has map
+import java.util.Map;      // inporta las utilidades de los mapas
+
+class Empleado{                 //creamos el objeto empleado
+    public Empleado(String n){
+        nombre = n;
+
+        sueldo = 2000;
+    }
+
+    public String toString(){
+        return "[Nombre=" + nombre + ", sueldo=" + sueldo+"]";
+    }
+
+    private String nombre;
+    private double sueldo;
+}
+
+HashMap<String, Empleado> personal=new HashMap<String, Empleado>();   //creamos un hasmap que almacene el objeto empleado que es un String
+
+personal.put("145", new Empleado(("Juan")));//hañadimos el nuebo enpleado Juan a la clabe 145 la clave es como la variable
+personal.put("146", new Empleado(("Ana"))); // hañadimos enpleado
+
+System.out.println(personal);// inprimimos el has map personal entero
+
+personal.remove("145"); //borra la clave 147
+
+personal.put("146", new Empleado("Natalia"));//sustiulle Ana por natalia  por lo que put nos sirbe tanbien para sobreescribir datos y modificarlos sin complicarnos mas 
+
+System.out.println(personal.entrySet());// nos de buelbe en colecion de tipo ser toda la colecion
+
+for(Map.Entry<String, Empleado> entrada: personal.entrySet()){    //para recorrer el hasmap
+    String clave=entrada.getKey();
+    Empleado valor=entrada.getValue();
+    System.out.println("Clave=" + clave +", Valor=" + valor);
+}
 
 
 Operadores y operaciones://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -140,6 +224,11 @@ resultadoLogico = != false;       // false (NOT lógico)
 resultadoLogico = 1;              //guardar dato o enviar a otra variable
 comparar == comparar;             // comparar datos de las variables
 
+logicos aplicados ha boleanos:
+! devuelve true si el operando es false
+&& devuelve false si uno de los poeradores es false
+|| devuelve true si uno de los operadores es true
+
 operador de incremento y decremento://///////////////////////////////////////////////////////////////////////////////////////////////////////
 int i = 1;
 
@@ -152,7 +241,15 @@ i--;  //decremento 	      entonces i guardara 0
 i+=3  //incremento pero de 3  entonces i guardara 4
 i-=3  //decremento pero de 3  entonces i guardara -2
 
+Caracteres se usan normal mente en textos /////////////////////////////////////////////////////////////////////
 
+\b Retroceso
+\t Tabulador
+\n salto de linea
+\r Cambio de linea
+\" Caracter comilla doble"
+\' Caracter comilla simple
+\\ Caracter barra hacia atras
 
 Concatenador:///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -235,13 +332,58 @@ private static void rellenarTableroH() {
 4. Funciones (Métodos):///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Una función en Java se define dentro de una clase y tiene una estructura como esta:
 
-public int sumar(int a, int b) {   // Método que recibe dos enteros y devuelve un entero
+public int sumar(int a, int b) {   // Método que recibe dos enteros y devuelve un entero lo que ba dentro de los () se yaman para metros
     return a + b;                  // Devuelve la suma de a y b
 }
 public: Indica que el método es accesible desde otras clases.
 int: Tipo de dato que devuelve la función.
 sumar(int a, int b): Nombre del método y los parámetros que recibe.
 return: Devuelve el valor.
+
+
+// Sobrecarga de funciones
+
+public static void main(String[] args) { //segun los datos entrar ha una funcion o ha otra
+    System.out.println(suma(11, 22))
+    System.out.println(suma(1.4, 2.6))
+}
+
+static int suma(int numero1, int numero2) { // primera funcion
+    return numero1 + numero2;
+}
+
+static int suma(double numero1, double numero2){ // segunda funcion
+    return numero1 + numero2
+}
+
+
+// funciones con barios parametros infinitos porque se crea un array list infinito y le puedes pasar todos los parametros que quieras
+
+public static void main(String[] args) {
+    System.out.println(suma(11, 22, 8))
+    System.out.println(suma(1.4, 2.6, 3.5))
+}
+
+static int suma(int... numeros) { // primera funcion
+    int suma = 0;
+
+    for (int x = 0; x < numero.length; x++){
+        suma = suma + numeros[x];
+    }
+
+    return suma;
+}
+
+static int suma(double... numeros){ // segunda funcion
+    double suma = 0;
+
+    for (int x = 0 < numero.length; x++) {
+        suma += numero[x];
+    }
+
+    return suma;
+}
+
 
 5. Clases y Objetos://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Una clase es una plantilla para crear objetos. Aquí un ejemplo básico de una clase:
@@ -298,6 +440,149 @@ public static void main(String[] args) { // lo metemos dentro del main principal
 }
 
 
+Herencia de objetos: //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+super()   //recoje bariables de las funciones anteriores ha ellas o padres ereda las bariables 
+          //pero para ello tanbien llama y ejecuta las funciones
+return (super.getX()); //para llamar a funciones de la erencia o metodo padre
+para ponerlo con el retur se escribe returm y dentor de los parentesis el super 
+
+java class main (codigo principal):
+public class Main {
+    public static void main(String[] args) {
+        Punto P1 = new Punto();
+        P1.setX(4);
+        System.out.println("He creado el punto ("+P1.getX()+", "+P1.getY()+")");
+        Punto_3d P3d = new Punto_3d();
+        P3d.setX(4);
+        System.out.println("He creado el punto ("+P3d.getX()+", "+P3d.getY()+ ", "+ P3d.getZ()+ ")");
+        P3d.imprimeCordenadas();
+    }
+}
+
+// tiene que esistir otra clase desde la que cojer las propiedades la cual se indica con el extend que se ban ha cojer las propiedades
+java class Punto_3d:
+--objeto que ereda: ("hijo")
+public class Punto_3d extends Punto { //heredo las clases y void de (Punto) incluidos geter han seter
+    private int z;
+
+    public Punto_3d(){
+        super();
+        int z = 0;
+    }
+
+    public void Punto_3d(int z, int y, int x){
+        //super(int z, int y, int x); // conparar codigo con el del profesor
+        this.z = z;
+    }
+
+    public void imprimeCordenadas(){
+        System.out.println("("+"he creado el punto:"+ x+ ", "+ y+", "+z+")" );
+    }
+
+    public int getZ() {
+        return z;
+    }
+
+    public void setZ(int z) {
+        this.z = z;
+    }
+}
+
+java class Punto:
+--objeto de la que ereda: ("padre")
+public class Punto {
+    protected int x;
+    protected int y; // protected las bariables estan protegidos para todos menos para los erederos extends y para los amigos que son los que estan en la misma carpeta
+
+    public Punto() {
+        x=0;
+        y=0;
+    }
+
+    public void Punto(int x, int y) {
+        this.x=x;
+        this.y=y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+}
+
+//erencia inplements///////////////////////////////////////////////////
+// Definimos una interfaz llamada Vehiculo
+// Clase base con un constructor
+class VehiculoBase {
+    protected String marca;
+
+    // Constructor de la clase base
+    public VehiculoBase(String marca) {
+        this.marca = marca;
+    }
+
+    // Método para mostrar la marca del vehículo
+    public void mostrarMarca() {
+        System.out.println("Marca del vehículo: " + marca);
+    }
+}
+
+// Interfaz que define el comportamiento de un vehículo
+interface Vehiculo {
+    void acelerar(int velocidad);
+    void frenar();
+}
+
+// La clase Coche hereda de VehiculoBase e implementa la interfaz Vehiculo
+class Coche extends VehiculoBase implements Vehiculo {
+    private int velocidad;
+
+    // Constructor de la clase Coche que usa super para llamar al constructor de la clase base
+    public Coche(String marca) {
+        super(marca); // Llamamos al constructor de la clase base
+        this.velocidad = 0;
+    }
+
+    // Implementación del método acelerar
+    @Override
+    public void acelerar(int velocidad) {
+        this.velocidad += velocidad;
+        System.out.println("El coche ha acelerado. Velocidad actual: " + this.velocidad + " km/h");
+    }
+
+    // Implementación del método frenar
+    @Override
+    public void frenar() {
+        this.velocidad = 0;
+        System.out.println("El coche ha frenado. Velocidad actual: " + this.velocidad + " km/h");
+    }
+}
+
+// Clase principal con el método main
+public class Main {
+    public static void main(String[] args) {
+        Coche miCoche = new Coche("Toyota"); // Se crea un coche con la marca "Toyota"
+        miCoche.mostrarMarca(); // Se muestra la marca usando un método de la clase base
+        miCoche.acelerar(50);
+        miCoche.frenar();
+    }
+}
+
+
+
+
 Modificadores de Acceso://////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 public      //Accesible desde cualquier clase.
@@ -307,7 +592,7 @@ protected   //Accesible desde la misma clase, clases del mismo paquete, y subcla
 static                            // Variable estática, compartida por todas las instancias
 void                              // indica que no devuelve ningun balor o en otras palabras que no se ba a bolber ausar par abalores
 final                             // que la variable o función que la lleve no puede volver a ser editada para modificar su valor por que se convierte en constante
-protected int datoProtegido = 10; // proted hace que el dato este protejido de manera que ninguna otra funcion pueda haceder ha el
+protected int datoProtegido = 10; // protected las bariables estan protegidos para todos menos para los erederos extends y para los amigos que son los que estan en la misma carpeta
 abstract                          // se usa para declarar clases y métodos que son incompletos y necesitan ser implementados en subclases.
 
 6.funciones de java: //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -317,6 +602,7 @@ System.out.print(variable);   //también podemos imprimir variables directamente
 System.out.println("Opción: \n1: Verdadero"); //con \n1 hacemos un salto de linea para que el testo "Verdadero" se imprima debajo
 //////////////////////////////////////////////////////tipos de print
 System.out.print();    //Imprime el testo tal cual todo junto en la misma limnea
+System.out.printf();   //no imprimirá variables numéricas y no incluirá un salto de línea al final.
 System.out.printf("%1.2f", x);   //Imprime con formato ejemplo System.out.printf("formato", valores); inpormira la variable valores con el nombre valores y no el valor que contenga
 System.out.println();  //cada println se asegurar que se haga en una limnea separando cada testo de los distintos println (ln = limnea)
 System.err.println();  //Imprime mensajes de error y e vita que se corte el código si se maneja el error
@@ -360,8 +646,10 @@ import java.util.Scanner;   //cojemos la librera de la clase escáner para poder
 import java.util.Random;    // random tiene las librerias capaces de aleatorizar numeros de manera que se creen numeros aleatorios a encargo
 import java.util.*;	    // importa todas las utilidades que haya de java ose atodas las clases de ese paquete
 import javax.swing.*;	// importa todas las utilidades de swing
-
-
+import java.util.ArrayList;  // inporta las clases necesarias para crear harray list dinamicos
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 
 8.Metodos y procedimientos //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -431,3 +719,124 @@ public class OrdenarArrayBidimensional {
         }
     }
 }
+
+
+9.Conexion a base de datos //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////conesion ha base de datos
+
+import java.sql.Connection;      //La clase Connection es parte del paquete java.sql
+import java.sql.DriverManager;   //es una clase que gestiona la lista de drivers de bases de datos disponibles
+import java.sql.SQLException;    //es una clase que proporciona información sobre errores de acceso a la base de datos o de ejecución de consultas SQL
+
+public class ConexionPostgre {
+    private static ConexionPostgre instance;// Definimos la clase ConexionPostgre que manejará la conexión a la base de datos PostgreSQL.
+    private static ConexionOracle instance; // Definimos la clase ConexionOracle que manejará la conexión a la base de datos OracleSQL.
+    private Connection connection;
+
+    private ConexionPostgre() { // lo canviariamos por oracle
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver"); // Cargar el driver de OracleSQL
+            Class.forName("org.postgresql.Driver");           // Cargar el driver de PostgreSQL
+            // Establecer la conexión
+            String url = "jdbc:oracle:thin:@localhost:1521:el nombre de tu base_de_datos";  //conectar con oracle
+            String url = "jdbc:postgresql://localhost:5432/el nombre de tu base_de_datos";  //conectar con postgres
+            String user = "tu_usuario";
+            String password = "tu_contraseña";
+            connection = DriverManager.getConnection(url, user, password); //autentificarse
+        } catch (ClassNotFoundException | SQLException e) { //si hay un error que no se caiga el programa basica mente
+            e.printStackTrace();
+        }
+    }
+
+    public static ConexionPostgre getInstance() { //lo canviariamos por oracle
+        if (instance == null) { // si no estamos conectados
+            instance = new ConexionPostgre(); //nos conectamos //lo canviariamos por oracle
+        }
+        return instance;  //nos debuelbe la instancia
+    }
+
+    public Connection getConnection() { //nos conectamos usando los driber y la pass
+        return connection;
+    }
+}
+
+
+//////////////////////////////////////////media queries para consultar a base de datos
+
+    // Método para obtener todos los coches de la base de datos
+
+    public void obtenerCoches() {
+        String query = "SELECT id, modelo, fabricante, anio FROM coches";        // Consulta SQL para seleccionar todos los coches
+        try (PreparedStatement ps = connection.prepareStatement(query);
+             ResultSet rs = ps.executeQuery()) {
+
+            // Recorrer el resultado de la consulta
+            while (rs.next()) {
+                int id = rs.getInt("id"); // Obtener el ID del coche
+                String modelo = rs.getString("modelo"); // Obtener el modelo
+                String fabricante = rs.getString("fabricante"); // Obtener el fabricante
+                int anio = rs.getInt("anio"); // Obtener el año
+
+                // Imprimir los datos del coche en la consola
+                System.out.println("ID: " + id + ", Modelo: " + modelo + ", Fabricante: " + fabricante + ", Año: " + anio);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Imprimir error en caso de fallo en la consulta
+        }
+    }
+
+    // Método para modificar los datos de un coche por su ID
+    public void modificarCoche(int id, String nuevoModelo, String nuevoFabricante, int nuevoAnio) {
+        // Consulta SQL para actualizar un coche
+        String query = "UPDATE coches SET modelo = ?, fabricante = ?, anio = ? WHERE id = ?";
+        try (PreparedStatement ps = connection.prepareStatement(query)) {
+            // Asignar los valores a los parámetros de la consulta
+            ps.setString(1, nuevoModelo);
+            ps.setString(2, nuevoFabricante);
+            ps.setInt(3, nuevoAnio);
+            ps.setInt(4, id);
+
+            // Ejecutar la actualización
+            int filasAfectadas = ps.executeUpdate();
+
+            // Verificar si la actualización fue exitosa
+            if (filasAfectadas > 0) {
+                System.out.println("Coche con ID " + id + " modificado correctamente.");
+            } else {
+                System.out.println("No se encontró un coche con ID " + id);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Imprimir error en caso de fallo en la actualización
+        }
+    }
+
+    // Método para filtrar coches por fabricante
+    public void filtrarCochesPorFabricante(String fabricante) {
+        // Consulta SQL para seleccionar coches de un fabricante específico
+        String query = "SELECT id, modelo, anio FROM coches WHERE fabricante = ?";
+        try (PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setString(1, fabricante); // Asignar el fabricante al parámetro de la consulta
+            ResultSet rs = ps.executeQuery();
+
+            boolean encontrado = false; // Variable para comprobar si hay resultados
+
+            // Recorrer los resultados de la consulta
+            while (rs.next()) {
+                encontrado = true;
+                int id = rs.getInt("id"); // Obtener el ID del coche
+                String modelo = rs.getString("modelo"); // Obtener el modelo
+                int anio = rs.getInt("anio"); // Obtener el año
+
+                // Imprimir los datos del coche filtrado
+                System.out.println("ID: " + id + ", Modelo: " + modelo + ", Año: " + anio);
+            }
+
+            // Si no se encontraron coches del fabricante especificado
+            if (!encontrado) {
+                System.out.println("No se encontraron coches del fabricante " + fabricante);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Imprimir error en caso de fallo en la consulta
+        }
+    }

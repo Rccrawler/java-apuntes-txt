@@ -1,0 +1,262 @@
+////////////////////////////////////////////////////////////////////terminos ha haprender
+
+----------------------------------------------------------------------------<Java-comand.java>--------------------------------------------------------------------------------
+
+propiedades js:////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+términos js://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+En JavaScript, un arreglo (o array en inglés) es una estructura de datos que te permite almacenar múltiples valores en una sola variable.
+Los elementos del arreglo pueden ser de cualquier tipo: números, cadenas, objetos, otros arreglos, etc.
+
+comentarios en js:////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+para hacer un comentario de una liena (comentario simple) //esto es un comentario sencillo
+/*
+Esto es un comentario largo 
+se pueden escribir barias líneas
+*/
+
+Variables://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let algo; // no tiene tipo definido todavía → undefined
+console.log(typeof algo); // "undefined"
+
+algo = 42; // ahora es un número
+console.log(typeof algo); // "number"
+
+algo = "Hola"; // ahora es un string
+console.log(typeof algo); // "string"
+
+algo = { saludo: "Hola" }; // ahora es un objeto
+console.log(typeof algo); // "object"
+
+con let o var se define cualquier tipo de variable de tipo numérica, texto etc..
+
+var a;
+a = 7;
+
+- var permite declarar la misma variable más de una vez sin error:
+
+var nombre = "Ana";
+var nombre = "Luis"; // No hay error
+
+- let no permite redeclarar una variable en el mismo ámbito:
+
+let nombre = "Ana";
+let nombre = "Luis"; // ❌ Error: Identifier 'nombre' has already been decla
+
+- const para valores constantes no se pueden canbiar despues:
+
+const pi = 3.1416;
+pi = 3; // ❌ Error: no se puede reasignar
+const sum = 10 + 10; // pero si hacer operaciones con el
+
+let myVar = 87;
+// Cambia solo el código debajo de esta línea
+myVar++;// sumamos uno con esta linea
+myVar--;// restamos con esta linea
+
+let a = 3; // a sera = a 3
+a += 12;   // con el += sumamos el 3 ya halmacenado mas los 12 nuebos
+let b = 9; // b sera = 9
+b -= 15;   // con el -= restamos a b lo que ya tenemos menos 15
+let c = 2;
+c *= 23;
+
+let c = 4.6;
+c *= 10;
+
+let myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // los testos se ponen entre comiyas y las /hola/ te permiten poner cosas o caracteres reserbados dentro por ejemplo si quiero poner una plabara con "HEee" y que salgan las omiyas habra que poner /"HEee"/
+
+let wordBlanks = "The " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + " over the hill."; // concatenar variables de texto ha una cadena
+
+en definitiba lo facil y optimo es usar let para tod tipo de variables
+
+Convertir Variables: ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Hasmap, Array ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let myArray = ["hola", 2]; // ne los harrys se pueden guardar barios parametros pero en js hademas se pueden guardar en el mismo datos de distinto tipo
+let teams = [["Bulls", 23], ["White Sox", 45]]; // en js se pueden guardar harreglos dentro de hareglos un harray dentro de otro 
+console.log(myArray[0]);     // ["Bulls", 23]
+console.log(myArray[0][0]);  // "Bulls"
+console.log(myArray[1][1]);  // 45
+console.log(myArray[1]);	 // ["banana", 5]
+console.log(myArray[1][0]);  // Resultado: "banana"
+
+const myArray = [50, 60, 70];
+const myData = myArray[0];
+console.log(myData);
+
+const myArray = [18, 64, 99];
+myArray[0] = 45; // guardar el dato en un harray
+
+const myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3]); // .push para hañadir mas datos o otro harray hal final de ese harray o harrais se pueden hañadir barios datos o el array directamente
+
+Operadores y operaciones://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Aritmeticos
+| Operador | Descripción    | Ejemplo          | Resultado |
+| -------- | -------------- | ---------------- | --------- |
+| `+`      | Suma           | `3 + 2`          | `5`       |
+| `-`      | Resta          | `5 - 1`          | `4`       |
+| `*`      | Multiplicación | `4 * 2`          | `8`       |
+| `/`      | División       | `10 / 2`         | `5`       |
+| `%`      | Módulo (resto) | `7 % 3`          | `1`       |
+| `++`     | Incremento     | `let x = 1; x++` | `x = 2`   |
+| `--`     | Decremento     | `let x = 2; x--` | `x = 1`   |
+| `**`     | Exponenciación | `2 ** 3`         | `8`       |
+
+// Operadores de comparacion
+| Operador | Descripción            | Ejemplo     | Resultado |
+| -------- | ---------------------- | ----------- | --------- |
+| `==`     | Igualdad (sin tipo)    | `5 == '5'`  | `true`    |
+| `===`    | Igualdad estricta      | `5 === '5'` | `false`   |
+| `!=`     | Desigualdad (sin tipo) | `5 != '5'`  | `false`   |
+| `!==`    | Desigualdad estricta   | `5 !== '5'` | `true`    |
+| `>`      | Mayor que              | `7 > 3`     | `true`    |
+| `<`      | Menor que              | `3 < 7`     | `true`    |
+| `>=`     | Mayor o igual que      | `5 >= 5`    | `true`    |
+| `<=`     | Menor o igual que      | `3 <= 2`    | `false`   |
+
+// Operadores logicos
+| Operador | Descripción    | Ejemplo         | Resultado |        |         |        |
+| -------- | -------------- | --------------- | --------- | ------ | ------- | ------ |
+| `&&`     | Y (AND)        | `true && false` | `false`   |        |         |        |
+| `\`      |                |  `\`            | `O (OR)`  |`\true` | `false\`| `true` |
+| `!`      |`Negación (NOT) | `!true`         | `false`   |        |         |        |
+
+// Operadores de Asignación
+| Operador | Descripción         | Ejemplo                | Resultado |
+| -------- | ------------------- | ---------------------- | --------- |
+| `=`      | Asignación          | `let x = 10;`          | `x = 10`  |
+| `+=`     | Suma y asigna       | `x += 5` → `x = x + 5` | `x = 15`  |
+| `-=`     | Resta y asigna      | `x -= 2`               | `x = 13`  |
+| `*=`     | Multiplica y asigna | `x *= 2`               | `x = 26`  |
+| `/=`     | Divide y asigna     | `x /= 2`               | `x = 13`  |
+| `%=`     | Módulo y asigna     | `x %= 4`               | `x = 1`   |
+
+Relaciones:///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Lógicos://///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+operador de incremento y decremento://///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Caracteres se usan normal mente en textos /////////////////////////////////////////////////////////////////////
+
+
+
+Concatenador:///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Estructuras de Control de Flujo Condicionales///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Condicionales://///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+if (a === "5") {
+  console.log("Con ===: Son iguales en valor y tipo");
+} else {
+  console.log("Con ===: No son iguales");
+}
+
+
+//comparaciones
+🔄 == (Igualdad suelta o débil)
+Compara solo el valor, sin importar el tipo.
+
+Si los tipos son diferentes, intenta convertir uno al tipo del otro (coerción de tipo).
+
+javascript
+Copiar
+Editar
+5 == "5"  // true → convierte el string "5" a número antes de comparar
+✅ === (Igualdad estricta)
+Compara el valor y el tipo.
+
+No hace conversión de tipos. Ambos deben ser exactamente iguales.
+
+javascript
+Copiar
+Editar
+5 === "5"  // false → son de tipos distintos: number vs string
+
+
+
+Bucles:////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const myArray = [];
+for (let i = 1; i < 6; i++){ // recoremos el for y hañadimos los numeros hal final
+  myArray.push(i);
+}
+
+for (let i = 0; i < 5; i++){
+  console.log(myArray[i]); // inprimimos en pantaya el resultado del harray
+}
+
+4. Funciones (Métodos):///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function reusableFunction() {
+  console.log("Hi World");
+}
+reusableFunction()
+
+
+function timesFive(num) {
+  return num * 5; // returm debuelbe el valor
+}
+
+const answer = timesFive(5);
+console.log(answer);
+
+
+
+// Sobrecarga de funciones
+
+
+
+// funciones con barios parametros infinitos porque se crea un array list infinito y le puedes pasar todos los parametros que quieras
+
+
+
+5. Clases y Objetos://////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Herencia de objetos: //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Modificadores de Acceso://////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+6.funciones de js: //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let catName = "Oliver";
+let catSound = "Meow!";
+console.log(catName); // inprime en la terminal textos
+console.log(catSound); // inprime en la terminal textos
+
+7.bibliotecas de js: //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+8.Metodos y procedimientos //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+9.Conexion a base de datos //////////////////////////////////////////////////////////////////////////////////////////////////////////
